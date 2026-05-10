@@ -1,23 +1,28 @@
 import java.util.*;
 class test{
 
-
-    public static int star(int n){
-            int result=n;
-            while(n!=0){
-                n/=10;
-                result+=n;
-            }
-            return result;
+    boolean  prime(int n){
+        if(n<2)
+            return false;
+        if(n==2)
+            return true;
+        for(int i=2;i<Math.sqrt(n);i++){
+            if(n%i==0)
+                return false;
+        }
+        return true;
+        
     }
-    public static void main(String []args){
-        Scanner sc=new Scanner(System.in);
-         long n=sc.nextLong();
-         System.out.println(n);
-       
-        
 
-        
+ public static void main(String[] args) {
+    test t=new test();
+    for(int i=2;i<=20;i++){
+        if(prime(i))
+            System.out.println(i);
+    }
+
+    
+                    
     }
 
 }
