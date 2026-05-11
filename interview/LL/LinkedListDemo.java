@@ -48,7 +48,7 @@ class LinkedList {
     void delete(int key) {
 
         if (head == null)
-            return;
+            return; 
 
         // If head node is to be deleted
         if (head.data == key) {
